@@ -146,6 +146,7 @@ type ASTree α = [Node α]
 data Node α
   = TextBlock α
   | Section DataIdentifier (ASTree α)
+  | ExistingSection DataIdentifier (ASTree α)
   | InvertedSection DataIdentifier (ASTree α)
   | Variable Bool DataIdentifier
   | Partial (Maybe α) FilePath
